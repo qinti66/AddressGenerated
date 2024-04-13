@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	hdwallet "github.com/miguelmota/go-ethereum-hdwallet"
+	"github.com/tyler-smith/go-bip39"
 	"log"
 	"os"
 	"strconv"
@@ -10,7 +11,7 @@ import (
 
 func main() {
 	var accs = ""
-	for i := 6; i < 50; i++ {
+	for i := 0; i <= 50; i++ {
 		entropy, err := bip39.NewEntropy(128)
 		if err != nil {
 			log.Fatal(err)
